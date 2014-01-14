@@ -4,55 +4,47 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "tap-if"
-  s.version = "0.5.0"
+  s.name = "moped-cleaner"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["bnorton"]
-  s.date = "2013-02-09"
-  s.description = "Object#tap_if clarifies control flow in many circumstances."
+  s.date = "2014-01-14"
+  s.description = "Typically one performs a database truncate (remove object from all collections) between tests but moped-cleaner only removes objects from collections that were inserted into."
   s.email = "brian.nort@gmail.com"
   s.extra_rdoc_files = [
-    "LICENSE.md",
+    "LICENSE",
     "README.md"
   ]
   s.files = [
     ".travis.yml",
     "Gemfile",
-    "Gemfile.lock",
-    "LICENSE.md",
+    "LICENSE",
     "README.md",
     "Rakefile",
     "VERSION",
-    "lib/tap_if.rb",
-    "lib/tap_unless.rb",
-    "spec/lib/tap_if_spec.rb",
-    "spec/lib/tap_unless_spec.rb",
-    "spec/spec_helper.rb",
-    "tap-if.gemspec"
+    "lib/moped-cleaner.rb",
+    "lib/overrides.rb"
   ]
-  s.homepage = "http://github.com/bnorton/tap-if"
+  s.homepage = "http://github.com/bnorton/moped-cleaner"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.25"
-  s.summary = "Tap into an object but only execute the code if truthy."
+  s.rubygems_version = "2.0.4"
+  s.summary = "Clean only models inserted when running tests with database interaction via moped"
 
   if s.respond_to? :specification_version then
-    s.specification_version = 3
+    s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<psych>, [">= 0"])
       s.add_development_dependency(%q<rake>, [">= 0"])
     else
-      s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<psych>, [">= 0"])
       s.add_dependency(%q<rake>, [">= 0"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<psych>, [">= 0"])
     s.add_dependency(%q<rake>, [">= 0"])

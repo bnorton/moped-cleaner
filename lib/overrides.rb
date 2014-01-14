@@ -1,12 +1,11 @@
-module TapUnless
-  ##
-  # See TapIf
-  #
-  def tap_unless(*args)
-    yield self if ((args.empty? && !self) || (args.any? && respond_to?(args.first) && !send(*args)))
-    #
-    self
+module Moped
+  class Collection
+    def insert_with_logging(*args)
+      $models[self.name] ||= self
+
+      insert_without_logging(*args)
+    end
+
+    alias_method_chain :insert, :logging
   end
 end
-
-Object.send(:include, TapUnless)

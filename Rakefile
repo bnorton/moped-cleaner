@@ -12,17 +12,13 @@ end
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  gem.name        = 'tap-if'
-  gem.homepage    = 'http://github.com/bnorton/tap-if'
+  gem.name        = 'moped-cleaner'
+  gem.homepage    = 'http://github.com/bnorton/moped-cleaner'
   gem.license     = 'MIT'
-  gem.summary     = 'Tap into an object but only execute the code if truthy.'
-  gem.description = 'Object#tap_if clarifies control flow in many circumstances.'
+  gem.summary     = 'Clean only models inserted when running tests with database interaction via moped'
+  gem.description = 'Typically one performs a database truncate (remove object from all collections) between tests but moped-cleaner only removes objects from collections that were inserted into.'
   gem.email       = 'brian.nort@gmail.com'
   gem.authors     = %w(bnorton)
 end
 
 Jeweler::RubygemsDotOrgTasks.new
-
-require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new(:spec)
-task :default => :spec
