@@ -1,18 +1,11 @@
-*.gem
-*.rbc
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
 rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
-
-# YARD artifacts
+doc
 .yardoc
-_yardoc
-doc/
+.bundle
+pkg
+
+.idea
+.idea/*
+.DS_Store
+
+*.swp
