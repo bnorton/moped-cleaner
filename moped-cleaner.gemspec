@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "moped-cleaner"
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["bnorton"]
-  s.date = "2014-01-14"
+  s.date = "2014-04-07"
   s.description = "Typically one performs a database truncate (remove object from all collections) between tests but moped-cleaner only removes objects from collections that were inserted into."
   s.email = "brian.nort@gmail.com"
   s.extra_rdoc_files = [
@@ -17,14 +17,15 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
-    ".travis.yml",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE",
     "README.md",
     "Rakefile",
     "VERSION",
     "lib/moped-cleaner.rb",
-    "lib/overrides.rb"
+    "lib/overrides.rb",
+    "moped-cleaner.gemspec"
   ]
   s.homepage = "http://github.com/bnorton/moped-cleaner"
   s.licenses = ["MIT"]
