@@ -19,7 +19,8 @@ module Moped
       }
 
       base.before(:each, &block)
-      base.after(:suite, &block)
+      base.before(:all, &block)
+      base.after(:all, &block)
     end
   end
 end
