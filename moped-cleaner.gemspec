@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["bnorton"]
-  s.date = "2014-04-07"
+  s.date = "2014-04-08"
   s.description = "Typically one performs a database truncate (remove object from all collections) between tests but moped-cleaner only removes objects from collections that were inserted into."
   s.email = "brian.nort@gmail.com"
   s.extra_rdoc_files = [
