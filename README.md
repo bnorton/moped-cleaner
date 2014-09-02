@@ -37,7 +37,7 @@ Unofficial Performance Results
 ```
 # With database cleaner (Remove all models from all collections after each test
 Finished in 1 minute 54.62 seconds
-2780 examples, 11 failures, 1 pending
+2780 examples, 0 failures
 
 # After including Moped cleaner and removing database cleaner
 Finished in 59.83 seconds
