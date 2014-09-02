@@ -3,6 +3,12 @@ moped-cleaner
 
 Clean only models inserted when running tests with database interaction via moped
 
+1. The problem:
+  - Database Cleaner removes all documents from all collections after each test
+  
+2. The Solution:
+  - Remove all documents from only **touched** collections after each test
+
 ####Installation:
 ```ruby
 # Gemfile
@@ -24,6 +30,18 @@ RSpec.configure do |config|
     Mongoid.truncate!
   end
 end
+```
+
+Unofficial Performance Results
+=============
+```
+# With database cleaner (Remove all models from all collections after each test
+Finished in 1 minute 54.62 seconds
+2780 examples, 11 failures, 1 pending
+
+# After including Moped cleaner and removing database cleaner
+Finished in 59.83 seconds
+2784 examples, 0 failures
 ```
 
 Contributing to moped-cleaner
